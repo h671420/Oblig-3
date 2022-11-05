@@ -22,8 +22,8 @@ public class BloggApp {
 				"Ser bra ut! - har lagt ved output-eksempel fra enhetstester",
 				"https://home.hvl.no/ansatte/lmkr/dat100/junitscreenshot.png");
 
-		Bilde innlegg3 = new Bilde(4, "Lars", "24-10",
-				"Flotte greier gutter,\n"
+		Bilde innlegg3 = new Bilde(4, "Leo", "05-11",
+				"Godt jobbet gutter!\n"
 				+ "Da tar vi helg eller?",
 				"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/streams/2013/June/130617/6C7911377-tdy-130617-leo-toasts-1.jpg");
 		
