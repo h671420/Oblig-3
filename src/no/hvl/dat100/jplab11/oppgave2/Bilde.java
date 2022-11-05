@@ -1,13 +1,11 @@
 package no.hvl.dat100.jplab11.oppgave2;
 
-import no.hvl.dat100.jplab11.common.TODO;
-
 public class Bilde extends Tekst {
 
 	private String url;
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
-		super(id,bruker,dato,0,tekst);
+		super(id,bruker,dato,tekst);
 		this.url=url;
 	}
 
@@ -29,7 +27,6 @@ public class Bilde extends Tekst {
 		return "BILDE"+super.toString().substring(5)+url+"\n";
 	}
 
-	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		String ret = super.toHTML().substring(0,super.toHTML().length()-8);
 		ret += "\n\t\t<iframe src=\""+url+"\" height=600 width=800></iframe><hr>\n";

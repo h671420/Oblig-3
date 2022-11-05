@@ -25,7 +25,8 @@ public class LesBlogg {
 		
 //		scanner.nextint funket ikke - den etterlot seg newlines som forkludret innlesing av andre linjer
 //		Jeg endte opp med masse looper og sånn, fordi jeg ville at metoden skulle kunne håndtere blogginnlegg
-//		med 'tekst' variabel over 1 linje.
+//		med 'tekst' variabel over 1 linje. Hvis innfilen hadde vært på ett format med skilletegn så hadde jeg kanskje
+//		sluppet billigere unna.
 		
 		try {
 			Scanner leser = new Scanner(new FileReader(mappe + "\\" + filnavn));

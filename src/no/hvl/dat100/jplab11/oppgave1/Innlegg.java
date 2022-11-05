@@ -1,7 +1,5 @@
 package no.hvl.dat100.jplab11.oppgave1;
 
-import no.hvl.dat100.jplab11.common.TODO;
-
 public abstract class Innlegg {
 	
 	private int id;
@@ -21,10 +19,8 @@ public abstract class Innlegg {
 	}
 
 	public Innlegg(int id, String bruker, String dato, int likes) {
-		this.id = id;
-		this.bruker = bruker;
-		this.dato = dato;
-		this.likes = likes;		
+		this(id,bruker,dato);
+		this.likes=likes;		
 	}
 	
 	public String getBruker() {
@@ -46,7 +42,6 @@ public abstract class Innlegg {
 
 	public int getId() {
 		return id;
-
 	}
 
 	public int getLikes() {
@@ -58,7 +53,7 @@ public abstract class Innlegg {
 	}
 	
 	public boolean erLik(Innlegg innlegg) {
-		if (this.getId()==innlegg.getId())
+		if (innlegg==null||this.getId()==innlegg.getId())
 			return true;
 		return false;
 	}
@@ -68,7 +63,6 @@ public abstract class Innlegg {
 		return id+"\n"+bruker+"\n"+dato+"\n"+likes+"\n";
 	}
 	
-	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		String ret="";
 		ret+="\t\t<h2>"+bruker+"@"+dato+" ["+likes+"]</h2>\n";

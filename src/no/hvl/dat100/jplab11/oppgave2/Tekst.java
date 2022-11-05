@@ -35,7 +35,7 @@ public class Tekst extends Innlegg {
 		return "TEKST\n"+super.toString()+tekst+"\n";
 	}
 	
-	// Metoden nedenfor er kun for valgfri oppgave 6
+	// Jeg så for meg at et innlegg kan ha flere linjer med 'tekst'
 	public String toHTML() {
 		String ret=super.toHTML();
 		Scanner linjeparser = new Scanner(tekst);
