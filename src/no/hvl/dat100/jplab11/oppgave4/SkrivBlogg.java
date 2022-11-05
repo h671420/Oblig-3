@@ -9,6 +9,10 @@ import no.hvl.dat100.jplab11.oppgave3.Blogg;
 public class SkrivBlogg {
 
 	public static boolean skriv(Blogg samling, String mappe, String filnavn) {
+		
+		//Her er det noe tull, siden min fil 'blogg' kjører Unix(lf), 
+		//mens fil 'bloggkorrekt' kjører Windows (CRLF). 
+		//Jeg forsøkte å legge til \r i toString, men da passerte jeg ikke unittestene  pga formatfeil.
 
 		try {
 			PrintWriter skriver = new PrintWriter(new FileWriter(mappe+"\\"+filnavn));
@@ -18,9 +22,7 @@ public class SkrivBlogg {
 		}catch(IOException e) {
 			System.out.println("Noe gikk galt med skriving av fil");
 			e.printStackTrace();
-		}
+		};
 		return false;
-		
-		//throw new UnsupportedOperationException(TODO.method());
 	}
 }
