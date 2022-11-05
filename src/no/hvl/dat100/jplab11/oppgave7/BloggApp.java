@@ -17,19 +17,14 @@ public class BloggApp {
 	public static String toHTML() {
 
 		Tekst innlegg1 = new Tekst(1, "Sven-Olai", "23-10",
-				"Lars, hva er status for den siste obligatoriske innleveringen?\n"
-				+ "Ny setning\n"
-				+ "Ny setning");
+				"Lars, hva er status for den siste obligatoriske innleveringen?");
 		Bilde innlegg2 = new Bilde(2, "Lars", "24-10",
-				"Ser bra ut! - har lagt ved output-eksempel fra enhetstester\nNy setning\nNy setning",
+				"Ser bra ut! - har lagt ved output-eksempel fra enhetstester",
 				"https://home.hvl.no/ansatte/lmkr/dat100/junitscreenshot.png");
 
-		Tekst innlegg3 = new Tekst(3, "Sven-Olai", "23-10",
-				"Lars, hva er status for den siste obligatoriske innleveringen?\nNy setning\nNy setning");
-		Bilde innlegg4 = new Bilde(4, "Lars", "24-10",
-				"Ser bra ut! - har lagt ved output-eksempel fra enhetstester\n"
-				+ "Ny setning\n"
-				+ "Ny setning",
+		Bilde innlegg3 = new Bilde(4, "Lars", "24-10",
+				"Flotte greier gutter,\n"
+				+ "Da tar vi helg eller?",
 				"https://media-cldnry.s-nbcnews.com/image/upload/t_fit-560w,f_auto,q_auto:best/streams/2013/June/130617/6C7911377-tdy-130617-leo-toasts-1.jpg");
 		
 		innlegg1.doLike();
@@ -41,8 +36,6 @@ public class BloggApp {
 		samling.leggTil(innlegg1);
 		samling.leggTil(innlegg2);
 		samling.leggTil(innlegg3);
-		samling.leggTil(innlegg4);
-
 		
 		return samling.toString();
 	}
